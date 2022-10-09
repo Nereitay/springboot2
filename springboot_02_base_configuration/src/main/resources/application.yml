@@ -1,0 +1,93 @@
+server:
+  port: 80
+  servlet:
+    context-path: /test123
+
+spring:
+  banner:
+    location: classpath:kiwiBanner.txt
+
+logging:
+  level:
+    root: info
+
+#yaml语法规则
+  #基本语法
+    # key: value -> value 前面一定要有空格
+    # 大小写敏感
+    # 属性层级关系使用多行描述，每行结尾使用冒号结束
+    # 使用缩进表示层级关系，同层级左侧对齐，只允许使用空格（不允许使用Tab键）
+    # 属性值前面添加空格（属性名与属性值之间使用冒号+空格作为分隔）
+    # # 表示注释
+    # 核心规则：数据前面要加空格与冒号隔开
+
+
+country: Spain
+province: Comunidad Madrid
+city: Madrid
+area: Sol
+
+age: 56
+
+flag: true
+
+birthday: 1988-08-12
+
+user:
+  name1: kiwi
+  age: 2
+
+#数组表示
+hobbies:
+  - game
+  - sleep
+  - music
+
+hobbies2: [game,reading]
+
+#对象数组
+users:
+  - name: banana
+    age: 2
+  - name: apple
+    age: 3
+
+users1:
+   -
+    name: banana
+    age: 2
+   -
+    name: apple
+    age: 3
+
+users2: [{name:mango,age:4},{name:uva,age:5}]
+
+a:
+  b:
+    c:
+      d:
+        e: 123
+
+#字面值表示方式
+boolean: TRUE #TRUE, true, True, FALSE,false, False均可
+float: 3.14 #6.8523015e+5 #支持科学计数法
+int: 123 #支持二进制、八进制、十六进制
+#null: ~ #使用 ~ 表示 null
+string: HelloWorld #字符串可以直接书写
+string2: "Hello World" #可以使用双引号包裹特殊字符
+date: 2018-02-17 #日期必须使用 yyyy-MM-dd 格式
+datetime: 2018-02-17T15:02:31+08:00 #时间和日期之间使用 T 连接， 最后使用 + 代表时区
+
+#yaml文件中变量引用
+baseDir: c:\windows
+tempDir: ${baseDir}\temp
+#属性值中如果出现转义字符，需要使用双引号包裹， \t
+tempDir1: "${baseDir}\temp\t1\t2\t3"
+
+#@ConfigurationProperties 自定义对象封装指定数据, 1 创建类 2 Spring加载数据到对象中 3. 使用时从spring中直接获取
+datasource:
+  driver-class-name: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql:///ssm_db?serverTimezone=UTC
+  username: root
+  password: root
+

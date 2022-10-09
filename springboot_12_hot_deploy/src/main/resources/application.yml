@@ -1,0 +1,24 @@
+server:
+  port: 80
+
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/ssm_db
+      username: root
+      password: root
+  devtools:
+    restart:
+      exclude: static/**, public/**, config/application.yml
+      enabled: true
+
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tb1_
+      id-type: auto #主键策略：使用数据库自增策略，默认使用雪花算法
+  configuration:
+    # 开启MyBatisPlus的日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印控制台
+

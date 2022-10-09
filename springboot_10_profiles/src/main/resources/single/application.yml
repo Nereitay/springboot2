@@ -1,0 +1,27 @@
+#应用环境
+#公共配置
+spring:
+  profiles:
+    active: test
+
+---
+#设置环境
+#生产环境
+server:
+  port: 81
+spring:
+  profiles: pro
+---
+#开发环境
+server:
+  port: 82
+spring:
+  profiles: dev
+---
+#测试环境
+server:
+  port: 83
+spring:
+  config:
+    activate:
+      on-profile: test

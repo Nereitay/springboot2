@@ -1,0 +1,31 @@
+内置数据源Hikari
+    数据源配置
+        springboot提供了3款内嵌数据源技术，分别如下：
+            HikariCP：默认内置数据源对象
+            Tomcat提供DataSource：HikariCP不可用的情况下，且在web环境中，将使用tomcat服务器配置的数据源对象
+            Commons DBCP：Hikari不可用，tomcat数据源也不可用，将使用dbcp数据源
+JdbcTemplate 内置持久化解决方案
+    步骤①：导入jdbc对应的坐标，记得是starter
+    步骤①：导入jdbc对应的坐标，记得是starter
+    步骤③：使用JdbcTemplate实现查询操作（非实体类封装数据的查询操作）
+
+SpringBoot提供了3种内嵌数据库（内存运行）供开发者选择，提高开发测试效率
+    H2
+    HSQL
+    Derby
+
+    内嵌数据库（H2）
+        步骤①：导入H2数据库对应的坐标，一共2个
+        步骤②：将工程设置为web工程，启动工程时启动H2数据库
+        步骤③：通过配置开启H2数据库控制台访问程序，也可以使用其他的数据库连接软件操作
+            web端访问路径/h2，访问密码123456，如果访问失败，先配置下列数据源，启动程序运行后再次访问/h2路径就可以正常访问了
+            datasource:
+              url: jdbc:h2:~/test
+              hikari:
+                driver-class-name: org.h2.Driver
+                username: sa
+                password: 123456
+        记得测试的时候 要web服务器给关了
+小结
+    H2内嵌式数据库启动方式，添加坐标，添加配置
+    H2数据库线上运行时请务必关闭

@@ -1,0 +1,12 @@
+spring:
+  redis:
+    host: localhost
+    port: 6379
+    client-type: jedis
+    jedis:
+      pool:
+        max-active: 8
+#    client-type: lettuce #默认
+#    lettuce:
+#      pool:
+#        max-active: 8

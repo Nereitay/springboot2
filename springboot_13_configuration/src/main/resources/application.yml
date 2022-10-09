@@ -1,0 +1,25 @@
+servers:
+  #驼峰
+#  ipAddress: 192.168.0.1
+
+#  ipaddress: 192.168.0.1
+
+  # 烤肉串模式
+  ip-address: 192.168.0.1
+
+  # underline
+#  ip_address: 192.168.0.1
+
+#  IPADDRESS: 192.168.0.1
+#  IP_ADDRESS: 192.168.0.1
+#  IP_ADD_R-E_SS: 192.168.0.1
+  port: 2025
+  timeout: -1
+  server-timeout: 3
+#  data-size: 1024
+  data-size: 10MB
+
+
+dataSource:
+  driverClassName: com.mysql.cj.jdbc.Driver
+  password: "0721" #0721不加引号会被认为是八进制

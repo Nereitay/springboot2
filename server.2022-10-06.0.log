@@ -1,0 +1,29 @@
+2022-10-06 14:35:33.875  INFO 5400 --- [main] es.kiwi.Springboot11LogApplication       : Starting Springboot11LogApplication using Java 1.8.0_271 on LAPTOP-E59OLPHM with PID 5400 (D:\ideawork\springboot2\springboot_11_log\target\classes started by nerea in D:\ideawork\springboot2)
+2022-10-06 14:35:33.878  INFO 5400 --- [main] es.kiwi.Springboot11LogApplication       : No active profile set, falling back to default profiles: default
+2022-10-06 14:35:34.552  INFO 5400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-06 14:35:34.557  INFO 5400 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-06 14:35:34.558  INFO 5400 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-10-06 14:35:34.609  INFO 5400 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-06 14:35:34.611  INFO 5400 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 693 ms
+2022-10-06 14:35:34.830  INFO 5400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-06 14:35:34.837  INFO 5400 --- [main] es.kiwi.Springboot11LogApplication       : Started Springboot11LogApplication in 1.396 seconds (JVM running for 2.26)
+2022-10-06 14:35:41.342  INFO 5400 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-06 14:35:41.343  INFO 5400 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-06 14:35:41.343  INFO 5400 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-10-06 14:35:41.358  WARN 5400 --- [http-nio-8080-exec-1] es.kiwi.controller.BookController        : warn...
+2022-10-06 14:35:41.358 ERROR 5400 --- [http-nio-8080-exec-1] es.kiwi.controller.BookController        : error...
+2022-10-06 14:35:42.216  WARN 5400 --- [http-nio-8080-exec-2] es.kiwi.controller.BookController        : warn...
+2022-10-06 14:35:42.216 ERROR 5400 --- [http-nio-8080-exec-2] es.kiwi.controller.BookController        : error...
+2022-10-06 14:35:42.955  WARN 5400 --- [http-nio-8080-exec-3] es.kiwi.controller.BookController        : warn...
+2022-10-06 14:35:42.956 ERROR 5400 --- [http-nio-8080-exec-3] es.kiwi.controller.BookController        : error...
+2022-10-06 14:40:33.901  INFO 63044 --- [main] es.kiwi.Springboot11LogApplication       : Starting Springboot11LogApplication using Java 1.8.0_271 on LAPTOP-E59OLPHM with PID 63044 (D:\ideawork\springboot2\springboot_11_log\target\classes started by nerea in D:\ideawork\springboot2)
+2022-10-06 14:40:33.903  INFO 63044 --- [main] es.kiwi.Springboot11LogApplication       : No active profile set, falling back to default profiles: default
+2022-10-06 14:40:34.691  INFO 63044 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-06 14:40:34.699  INFO 63044 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-06 14:40:34.699  INFO 63044 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-10-06 14:40:34.752  INFO 63044 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-06 14:40:34.752  INFO 63044 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 805 ms
+2022-10-06 14:40:34.999  INFO 63044 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-06 14:40:35.011  INFO 63044 --- [main] es.kiwi.Springboot11LogApplication       : Started Springboot11LogApplication in 1.51 seconds (JVM running for 2.349)
+2022-10-06 14:41:03.957  INFO 63044 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-06 14:41:03.957  INFO 63044 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'

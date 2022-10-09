@@ -1,0 +1,37 @@
+松散绑定
+    即配置文件中的命名格式与变量名的命名格式可以进行格式上的最大化兼容
+    @ConfigurationProperties绑定属性支持属性名宽松绑定（忽略大小写和各种短线）
+        驼峰
+        下划线
+        中划线
+        常量
+    prefix属性有特殊要求：Canonical names should be kebab-case ('-' separated), lowercase alpha-numeric characters and must start with a letter
+@Value和@ConfigurationProperties比较
+    无论配置文件是 yml 还是 properties 他们都能获取到值。
+    如果说，我们只是在某个业务逻辑中需要获取一下配置文件中的某项值，使用 @Value。
+    如果说，我们专门编写了一个 JavaBean 来和配置文件进行映射，我们就直接使用@ConfigurationProperties。
+小结:
+    @ConfigurationProperties绑定属性支持属性名宽松绑定
+    @Value注解不支持松散绑定
+    绑定前缀命名命名规则
+        绑定前缀名推荐采用烤肉串命名规则，即使用中划线做分隔符
+
+常用计量单位应用
+    Duration：表示时间间隔，可以通过@DurationUnit注解描述时间单位，例如上例中描述的单位分钟（ChronoUnit.MINUTES）
+    DataSize：表示存储空间，可以通过@DataSizeUnit注解描述存储空间单位，例如上例中描述的单位为MB（DataUnit.MEGABYTES）
+
+bean属性校验
+   开启Bean数据校验
+        步骤①：开启校验框架 只加Hibernate校验框架坐标也可以实现
+        步骤②：在需要开启校验功能的类上使用注解@Validated开启校验功能
+        步骤③：对具体的字段设置校验规则
+小结:
+    启用Bean属性校验
+    导入JSR303与Hibernate校验框架坐标
+    使用@Validated注解启用校验功能
+    使用具体校验规则规范数据校验格式
+
+二进制前缀 0b
+八进制前缀 0 ->   0(0-7)
+十六进制前缀 0X -> 0x(0-9, a-f)
+注意在配制文件中 字符串的书写 加上引号包裹，养成习惯，遇到0开头的数据多注意

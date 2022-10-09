@@ -1,0 +1,37 @@
+加载测试专用属性
+    在启动测试环境时可以通过properties参数设置测试环境专用的属性
+    当 args参数 与 properties参数 设置共存时, args属性配置优先于properties属性配置加载。
+小结:
+    加载测试临时属性应用于小范围测试环境
+
+
+加载测试专用配置
+    步骤①：在测试包test中创建专用的测试环境配置类
+    步骤②：在启动测试环境时，导入测试环境专用的配置类，使用@Import注解即可实现
+小结:
+    加载测试范围配置应用于小范围测试环境
+
+测试类中启动web环境
+    1. 模拟端口
+        每一个springboot的测试类上方都会标准@SpringBootTest注解，而注解带有一个属性，叫做webEnvironment。通过该属性就可以设置在测试用例中启动web环境
+    2. 测试类中启动web环境时，可以指定启动的Web环境对应的端口，springboot提供了4种设置值
+        MOCK：根据当前设置确认是否启动web环境，例如使用了Servlet的API就启动web环境，属于适配性的配置
+        DEFINED_PORT：使用自定义的端口作为web服务器端口
+        RANDOM_PORT：使用随机端口作为web服务器端口
+        NONE：不启动web环境
+
+小结:
+    web环境模拟测试
+    设置测试端口
+    模拟测试启动
+    模拟测试匹配（各组成部分信息均可匹配）
+
+业务层测试事务回滚
+    在springboot的测试类中通过添加注解@Transactional来阻止测试用例提交事务
+    通过注解@Rollback控制springboot测试类执行结果是否提交事务，需要配合注解@Transactional使用
+
+测试用例设置随机数据
+    ${random.int}表示随机整数
+    ${random.int(10)}表示10以内的随机数
+    ${random.int(10,20)}表示10到20的随机数
+        其中()可以是任意字符，例如[]，!!均可

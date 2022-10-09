@@ -1,0 +1,37 @@
+手工启动热部署
+    1 启动热部署
+        步骤①：导入开发者工具对应的坐标
+        步骤②：构建项目，可以使用快捷键激活此功能 对应的快捷键一定要记得 Ctrl + F9
+    2 关于热部署
+        重启（Restart）：自定义开发代码，包含类、页面、配置文件等，加载位置restart类加载器
+        重载（ReLoad）：jar包，加载位置base类加载器
+    3. 小结
+        1.开启开发者工具后启用热部署
+        2.使用构建项目操作启动热部署（Ctrl+F9）
+        3.热部署仅仅加载当前开发者自定义开发的资源，不加载jar资源
+
+自动启动热部署
+    步骤①：设置自动构建项目
+        打开【File】，选择【settings…】,在面板左侧的菜单中找到【Compile】选项，然后勾选【Build project automatically】，意思是自动构建项目
+        自动构建项目选项勾选后
+    步骤②：允许在程序运行时进行自动构建
+        使用快捷键【Ctrl】+【Alt】+【Shit】+【/】打开维护面板，选择第1项【Registry…】
+        这样程序在运行的时候就可以进行自动构建了，实现了热部署的效果。
+        激活方式：Idea失去焦点5秒后启动热部署
+    小结:
+         1. 设置自动构建用于自动热部署
+
+热部署范围配置
+    配置中默认不参与热部署的目录信息如下
+        /META-INF/maven
+        /META-INF/resources
+        /resources
+        /static
+        /public
+        /templates
+    自定义不参与重启排除项
+    spring:
+      devtools:
+        restart:
+          # 设置不参与热部署的文件或文件夹
+          exclude: static/**,public/**,config/application.yml

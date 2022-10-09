@@ -1,0 +1,15 @@
+# The following 3 profiles are active: "devMVC", "devDB", "dev"
+#spring:
+#  profiles:
+#    active: dev
+#    include: devMVC,devDB
+
+
+
+# The following 3 profiles are active: "dev", "devMVC", "devDB"
+spring:
+  profiles:
+    active: @profile.active@
+    group:
+      "dev": devMVC,devDB
+      "pro": devMVC,proDB
