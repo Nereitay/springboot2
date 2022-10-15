@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ssm_db
+    username: root
+    password: root
+    type: com.zaxxer.hikari.HikariDataSource
+#  elasticsearch:
+#    rest:
+#      uris: https://localhost:9200
+#      username: elastic
+#      password: "2QFJ*hlb0Ts6oF44A7Dr"
+
+rest-high-level-client:
+  host: https://localhost:9200
+  username: elastic
+  password: "2QFJ*hlb0Ts6oF44A7Dr"
+
+#设置Mp
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tb1_
