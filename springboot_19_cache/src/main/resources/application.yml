@@ -1,0 +1,42 @@
+server:
+  port: 80
+
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tb1_
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ssm_db
+    username: root
+    password: root
+    type: com.zaxxer.hikari.HikariDataSource
+
+#  cache:
+#    type: ehcache
+#    ehcache:
+#      config: ehcache.xml #如果不叫默认名ehcache.xml，可以在这里设置
+
+#  cache:
+#    type: redis
+#    redis:
+#      use-key-prefix: true #带前缀smsCode
+#      cache-null-values: false
+#      key-prefix: sms_ #前缀前再加前缀，如果use-key-prefix: false,这个配置不起作用
+#      time-to-live: 10s
+#  redis:
+#    host: localhost
+#    port: 6379
+
+memcached:
+  servers: 192.168.136.141:11211
+  poolSize: 10
+  opTimeout: 3000
+
+
