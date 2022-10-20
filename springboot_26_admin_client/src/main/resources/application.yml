@@ -1,0 +1,22 @@
+server:
+  port: 8082
+
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
+#是否对外开放功能
+management:
+  endpoint:
+    health: # health是最基本信息不允许去除
+      show-details: ALWAYS
+    info:
+      enabled: true
+
+  endpoints:
+    web: # web端能否看到
+      exposure:
+        include: "*"
+    enabled-by-default: true #actuator对外开放的数量，默认true启用所有端点
+    # cmd jconsole命令

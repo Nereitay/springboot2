@@ -1,0 +1,16 @@
+server:
+  port: 80
+
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616 #管理后台端口：8161 用户名和密码 admin
+  jms:
+    pub-sub-domain: false # false为peer-2-peer：点对点模型， true为 publish-subscribe：发布订阅模型
+    template:
+      default-destination: kiwies
+
+  rabbitmq:
+    host: 192.168.136.141
+    port: 5672
+    username: nerea
+    password: nerea

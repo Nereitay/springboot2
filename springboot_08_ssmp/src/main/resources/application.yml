@@ -8,6 +8,11 @@ spring:
       url: jdbc:mysql://localhost:3306/ssm_db
       username: root
       password: root
+  #admin
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
 
 mybatis-plus:
   global-config:
@@ -17,3 +22,19 @@ mybatis-plus:
   configuration:
     # 开启MyBatisPlus的日志
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印控制台
+
+management:
+  endpoint:
+    health:
+      show-details: ALWAYS
+  endpoints:
+    web:
+      exposure:
+#        include: health, info
+        include: "*"
+
+info:
+  author: Nerea
+  appName: @project.artifactId@
+  version: @project.version@
+  company: KiwiES
