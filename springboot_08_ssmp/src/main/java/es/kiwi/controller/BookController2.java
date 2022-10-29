@@ -1,9 +1,9 @@
 package es.kiwi.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import es.kiwi.controller.utils.R;
 import es.kiwi.model.Book;
 import es.kiwi.service.IBookService;
-import es.kiwi.controller.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +18,9 @@ public class BookController2 {
 
     @Autowired
     private IBookService bookService;
+
+    /*@Autowired
+    private IpCountService ipCountService;*/
 
     @GetMapping
     public R getAll() {
@@ -64,6 +67,9 @@ public class BookController2 {
 
     @GetMapping("/{current}/{size}")
     public R getPage(@PathVariable int current, @PathVariable int size, Book book) {
+
+//        ipCountService.count(); //在拦截器中设置
+
         IPage<Book> page = bookService.getPage(current, size, book);
         //如果当前页码值大于总页码值，那么重新执行查询操作，使用最大页码值作为当前页码值
         if (current > page.getPages()) {

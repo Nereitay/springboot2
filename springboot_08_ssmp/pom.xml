@@ -59,6 +59,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>-->
+
+        <!--开发starter-->
+        <dependency>
+            <groupId>com.mapache</groupId>
+            <artifactId>ip_spring_boot_starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

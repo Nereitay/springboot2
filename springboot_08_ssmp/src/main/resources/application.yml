@@ -38,3 +38,9 @@ info:
   appName: @project.artifactId@
   version: @project.version@
   company: KiwiES
+
+tools:
+  ip:
+    cycle: 10
+    cycle-reset: false
+    model: "detail"
